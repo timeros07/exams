@@ -1,0 +1,2 @@
+serviceClass: icis.pcz.pl.examsmanagement.client.ExamsManagementService
+path: CF216DF7119A54B37634EA242F271DF2.gwt.rpc

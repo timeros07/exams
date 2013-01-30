@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee                http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+  <!-- Servlets -->
+  <servlet>
+  	<servlet-name>examsManagementServiceImpl</servlet-name>
+  	<servlet-class>icis.pcz.pl.examsmanagement.server.ExamsManagementServiceImpl</servlet-class>
+  	
+  	<init-param>
+  		<param-name>mySqlConnectionString</param-name>
+  		<param-value>jdbc:mysql://localhost/exams?user=root;password=root;useUnicode=true;characterEncoding=utf8;autoReconnect=true</param-value>
+  	</init-param>
+  	
+  	<init-param>
+  		<param-name>ldapConnectionString</param-name>
+  		<param-value>ldap://localhost:389</param-value>
+  	</init-param>
+  	
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>examsManagementServiceImpl</servlet-name>
+    <url-pattern>/examsmanagement/examsManagement</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet -->
+  <servlet>
+    <servlet-name>ExamUploadServlet</servlet-name>
+    <servlet-class>icis.pcz.pl.examsmanagement.server.ExamUploadServlet</servlet-class>
+    <init-param>
+  		<param-name>mySqlConnectionString</param-name>
+  		<param-value>jdbc:mysql://localhost/exams?user=root;password=root</param-value>
+  	</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+	<servlet-name>ExamUploadServlet</servlet-name>
+	 <url-pattern>/examsmanagement/examUpload</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Login Service -->
+  <servlet>
+  	<servlet-name>LoginServiceImpl</servlet-name>
+  	<servlet-class>icis.pcz.pl.examsmanagement.server.LoginServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>LoginServiceImpl</servlet-name>
+    <url-pattern>/examsmanagement/loginService</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>Examsmanagement.html</welcome-file>
+  </welcome-file-list>
+
+  <servlet>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+    <init-param>
+      <param-name>services</param-name>
+      <param-value/>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <url-pattern>/_ah/spi/*</url-pattern>
+  </servlet-mapping>
+
+</web-app>

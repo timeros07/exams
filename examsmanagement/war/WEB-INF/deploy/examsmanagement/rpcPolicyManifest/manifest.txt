@@ -1,0 +1,4 @@
+# Module examsmanagement
+# RPC service class, partial path of RPC policy file
+icis.pcz.pl.examsmanagement.client.ExamsManagementService, CF216DF7119A54B37634EA242F271DF2.gwt.rpc
+icis.pcz.pl.examsmanagement.client.LoginService, 1A93C33C6A1DC83E34FA41BC53D8421E.gwt.rpc

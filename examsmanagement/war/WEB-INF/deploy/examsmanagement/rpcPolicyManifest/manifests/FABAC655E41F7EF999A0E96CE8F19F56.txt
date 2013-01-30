@@ -1,0 +1,2 @@
+serviceClass: icis.pcz.pl.examsmanagement.client.LoginService
+path: 1A93C33C6A1DC83E34FA41BC53D8421E.gwt.rpc
